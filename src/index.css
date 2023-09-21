@@ -1,58 +1,85 @@
+/* Importation de polices Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 
+/* Importation des styles de base de Tailwind CSS */
 @tailwind base;
+
+/* Importation des composants de Tailwind CSS */
 @tailwind components;
+
+/* Importation des utilitaires de Tailwind CSS */
 @tailwind utilities;
 
+/* Réinitialisation des styles pour tous les éléments */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Comportement de défilement fluide */
 }
 
+/* Styles personnalisés pour les composants */
 @layer components {
+  /* Conteneur avec largeur maximale */
   .max-container {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centrage horizontal du contenu */
   }
 
+  /* Style pour les champs de saisie (input) */
   .input {
+    /* Application de plusieurs classes de Tailwind CSS */
     @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
   }
 }
 
+/* Utilitaires personnalisés */
 @layer utilities {
+  /* Classe pour la gestion des marges et des rembourrages */
   .padding {
+    /* Application de classes de marges et de rembourrages de Tailwind CSS */
     @apply sm:px-16 px-8 sm:py-24 py-12;
   }
 
+  /* Classe pour la gestion des marges horizontales */
   .padding-x {
+    /* Application de classes de marges horizontales de Tailwind CSS */
     @apply sm:px-16 px-8;
   }
 
+  /* Classe pour la gestion des marges verticales */
   .padding-y {
+    /* Application de classes de marges verticales de Tailwind CSS */
     @apply sm:py-24 py-12;
   }
 
+  /* Classe pour la gestion des marges à gauche */
   .padding-l {
+    /* Application de classes de marges à gauche de Tailwind CSS */
     @apply sm:pl-16 pl-8;
   }
 
+  /* Classe pour la gestion des marges à droite */
   .padding-r {
+    /* Application de classes de marges à droite de Tailwind CSS */
     @apply sm:pr-16 pr-8;
   }
 
+  /* Classe pour la gestion des marges en haut */
   .padding-t {
+    /* Application de classes de marges en haut de Tailwind CSS */
     @apply sm:pt-24 pt-12;
   }
 
+  /* Classe pour la gestion des marges en bas */
   .padding-b {
+    /* Application de classes de marges en bas de Tailwind CSS */
     @apply sm:pb-24 pb-12;
   }
 
+  /* Classe pour le style du texte d'information */
   .info-text {
+    /* Application de classes de style de texte de Tailwind CSS */
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
